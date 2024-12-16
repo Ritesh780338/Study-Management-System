@@ -1,6 +1,6 @@
 const signupdiv=document.getElementById("signup");
 const logindiv=document.getElementById("login");
-let user=(JSON.parse(localStorage.getItem("users"))||[{"username":"dummy","email":"dummy@email.com","password":"dummypass"}])
+let user=(JSON.parse(localStorage.getItem("users"))||[])
 let loginuser=JSON.parse(localStorage.getItem("loginUser"))
 console.log(loginuser)
 if(loginuser)
@@ -21,6 +21,11 @@ function signinSubmit()
     const username=document.getElementById("username").value;
     const password=document.getElementById("pass").value;
     const email=document.getElementById("email").value;
+    if(username==""||password==""||email=="")
+    {
+        alert("Complete the fields!")
+        return;
+    }
     if(user.find((users)=>users.email===email))
     {
         alert("User already present")
@@ -40,6 +45,11 @@ function loginSubmit(event)
     event.preventDefault();
     const loginemail=document.getElementById("loginemail").value;
     const loginpass=document.getElementById("loginpass").value;
+    if(loginpass==""||loginemail=="")
+    {
+        alert("Complete the fields!")
+        return;
+    }
     const founduser=user.find((users)=>users.email===loginemail)
     if(founduser)
     {
