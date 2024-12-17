@@ -55,7 +55,7 @@ function loginSubmit(event)
     {
         if(loginpass==founduser.password)
         {
-            alert("Login successful!");
+            alert("Welcome "+founduser.username);
             localStorage.setItem("loginUser",JSON.stringify({"name":founduser.username,"email":loginemail}))
             window.location.href='LandingPage.html'
             return;

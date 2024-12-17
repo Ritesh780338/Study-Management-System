@@ -78,6 +78,6 @@ function showNotification(message) {
 function signOut(event)
 {
     event.preventDefault();
-    localStorage.removeItem("loginUser");
+    localStorage.setItem("loginUser",null)
     window.location.href='login.html';
 }

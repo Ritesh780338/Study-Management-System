@@ -26,12 +26,12 @@
             <div id="signup">
                 <form>
                     <h1>Sign Up</h1>
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
-                    <label for="pass">Password</label>
-                    <input type="password" name="pass" id="pass">
+                    <!-- <label for="username">Username</label> -->
+                    <input type="text" name="username" id="username" placeholder="Name">
+                    <!-- <label for="email">E-mail</label> -->
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <!-- <label for="pass">Password</label> -->
+                    <input type="password" name="pass" id="pass" placeholder="Password">
                     <button id="signupsubmit" onclick="signinSubmit()">Sign In</button>
                     <p>Already a user? <a href="" id="loginbtn" onclick="showLogin(event)">Login</a></p>
                 </form>
@@ -40,10 +40,10 @@
             <div id="login">
                 <form>
                     <h1>Login</h1>
-                    <label for="loginemail">E-mail</label>
-                    <input type="email" name="loginemail" id="loginemail">
-                    <label for="loginpass">Password</label>
-                    <input type="password" name="loginpass" id="loginpass">
+                    <!-- <label for="loginemail">E-mail</label> -->
+                    <input type="email" name="loginemail" id="loginemail" placeholder="E-mail">
+                    <!-- <label for="loginpass">Password</label> -->
+                    <input type="password" name="loginpass" id="loginpass" placeholder="Password">
                     <button id="loginsubmit" onclick="loginSubmit(event)">Login</button>
                     <p>New user? <a href="" id="signupbtn" onclick="showSignup(event)">Sign Up</a></p>
                 </form>
